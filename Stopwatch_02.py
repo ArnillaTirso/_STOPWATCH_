@@ -38,4 +38,3 @@ class StopWatch(Frame):
         self.m.pack(side=LEFT, fill=BOTH, expand=1, pady=5, padx=2)
         scrollbar.config(command=self.m.yview)
         scrollbar.pack(side=RIGHT, fill=Y)
-
