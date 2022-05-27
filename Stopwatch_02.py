@@ -88,3 +88,20 @@ class StopWatch(Frame):
             self.m.insert(END, self.laps[-1])
             self.m.yview_moveto(1)
             self.lapmod2 = self._elapsedtime
+
+def main():
+    root = Tk()
+    root.wm_attributes("-topmost", 1)      
+    sw = StopWatch(root)
+    sw.pack(side=TOP)
+
+    Button(root, text='Lap', command=sw.Lap).pack(side=LEFT)
+    Button(root, text='Start', command=sw.Start).pack(side=LEFT)
+    Button(root, text='Stop', command=sw.Stop).pack(side=LEFT)
+    Button(root, text='Reset', command=sw.Reset).pack(side=LEFT)
+
+    
+    root.mainloop()
+
+if __name__ == '__main__':
+    main()
